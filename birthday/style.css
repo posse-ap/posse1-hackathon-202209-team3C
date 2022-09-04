@@ -2,12 +2,15 @@
 .tab{
     display: flex;
     flex-wrap: wrap;
+    
   }
-  .tab li a{
+
+.tab li a{
     display: block;
     background:#ddd;
     margin:0 2px;
     padding:10px 20px;
+    
   }
   /*liにactiveクラスがついた時の形状*/
   .tab li.active a{
@@ -73,6 +76,7 @@
     padding: 10px; 
     border-bottom: 1px solid #ddd;
   }
+
 
   @charset "utf-8";
 
@@ -236,3 +240,17 @@
   .slick-arrow.slick-hidden {
       display: none;
   }
+header{display: flex;
+}
+.header-1_logo-img{
+line-height: 76px;
+}
+.header-line{
+    height: 36px;
+    width: 36px;
+}
+.line-link{
+    margin-top: ;
+    text-align: right;
+    
+}
