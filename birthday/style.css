@@ -2,6 +2,8 @@
 .tab{
     display: flex;
     flex-wrap: wrap;
+    margin-right: 15px;
+    
     
   }
 
@@ -76,7 +78,10 @@
     padding: 10px; 
     border-bottom: 1px solid #ddd;
   }
-header{display: flex;
+header{
+    display: flex;
+    justify-content: space-between;
+        
 }
 .header-1_logo-img{
 line-height: 76px;
@@ -89,4 +94,8 @@ line-height: 76px;
     margin-top: ;
     text-align: right;
     
+}
+.header-buttom{
+    display: flex;
+    margin-right: 15px;
 }
