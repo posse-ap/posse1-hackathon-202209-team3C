@@ -2,13 +2,11 @@
 .tab{
     display: flex;
     flex-wrap: wrap;
-    margin-right: 15px;
-    
-    
+    margin-right: 15px;  
   }
 
 
-}
+
 
 .tab li a {
   display: block;
@@ -81,6 +79,7 @@ a {
 .area h2 {
   font-size: 1.3rem;
   margin: 0 0 20px 10px;
+  padding-top: 40px;
 }
 
 .area li {
@@ -90,7 +89,7 @@ a {
 
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;}
         
 
 
@@ -121,10 +120,17 @@ body {
   background: #eee;
 }
 
-h2,
+h2 {
+  text-align: center;
+}
+
 p {
   text-align: center;
-  padding: 20px;
+  padding: 20px 3px 20px 20;
+}
+
+h3{
+  te
 }
 
 ul {
@@ -262,6 +268,7 @@ a:active {
 
   .header-1_logo-img {
     line-height: 76px;
+    padding: 25px;
   }
 
   .header-line {
@@ -270,7 +277,6 @@ a:active {
   }
 
   .line-link {
-    margin-top: ;
     text-align: right;
 
 
@@ -324,3 +330,28 @@ a:active {
     columns: 2;
     }	
   }
+
+
+  /* モーダルウィンドウ */
+/*infoエリアをはじめは非表示*/
+#info{
+	display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container{
+    max-width: 600px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+	background:#ccc;	
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+	background:#666;
+}
