@@ -7,77 +7,86 @@
     
   }
 
-.tab li a{
-    display: block;
-    background:#ddd;
-    margin:0 2px;
-    padding:10px 20px;
-    
+
+}
+
+.tab li a {
+  display: block;
+  background: #ddd;
+  margin: 0 2px;
+  padding: 10px 20px;
+
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a {
+  background: #fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;
+  /*はじめは非表示*/
+  opacity: 0;
+  /*透過0*/
+  background: #fff;
+  padding: 50px 20px;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+  display: block;
+  /*表示*/
+  animation-name: displayAnime;
+  /*ふわっと表示させるためのアニメーション*/
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime {
+  from {
+    opacity: 0;
   }
-  /*liにactiveクラスがついた時の形状*/
-  .tab li.active a{
-    background:#fff;
+
+  to {
+    opacity: 1;
   }
-  
-  
-  /*エリアの表示非表示と形状*/
-  .area {
-    display: none;/*はじめは非表示*/
-    opacity: 0;/*透過0*/
-    background: #fff;
-    padding:50px 20px;
-  }
-  
-  /*areaにis-activeというクラスがついた時の形状*/
-  .area.is-active {
-      display: block;/*表示*/
-      animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-  }
-  
-  @keyframes displayAnime{
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  
-  
-  /*========= レイアウトのためのCSS ===============*/
-  
-  body{
-    background:#eee;
-  }
-  
-  ul{
-    list-style:none;
-  }
-  
-  a{
-    color:#333;
-    text-decoration: none;
-  }
-  
-  .wrapper{
-    width:100%;
-    max-width: 960px;
-    margin:30px auto;
-      background:#fefefe;
-  }
-  
-  .area h2{
-    font-size:1.3rem;
-    margin:0 0 20px 10px;
-  }
-  
-  .area li{
-    padding: 10px; 
-    border-bottom: 1px solid #ddd;
-  }
+}
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+  background: #eee;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 30px auto;
+  background: #fefefe;
+}
+
+.area h2 {
+  font-size: 1.3rem;
+  margin: 0 0 20px 10px;
+}
+
+.area li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
 
 header{
     display: flex;
@@ -86,183 +95,195 @@ header{
 
 
 
-  @charset "utf-8";
+@charset "utf-8";
 
-  /*==================================================
+/*==================================================
   スライダーのためのcss
   ===================================*/
-  .slider img {
-      width:100%;/*スライダー内の画像を横幅100%に*/
-      height:auto;
-  }
-  
-  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
-  
-  .slider .slick-slide {
-      margin:0 10px;/*スライド左右の余白調整*/
-  }
-  
-  
-  /*========= レイアウトのためのCSS ===============*/
-  
-  body{
-    background:#eee;
-  }
-  
-  h2,p {
-      text-align:center;
-      padding:20px;
-  }
-  
-  ul{
-    margin:0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  a{
-    color: #333;
-  }
-  
-  a:hover,
-  a:active{
-    text-decoration: none;
-  }
-  
-  /* Slider */
-  .slick-slider
-  {
-      position: relative;
-  
-      display: block;
-      box-sizing: border-box;
-  
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-  
-      -webkit-touch-callout: none;
-      -khtml-user-select: none;
-      -ms-touch-action: pan-y;
-          touch-action: pan-y;
-      -webkit-tap-highlight-color: transparent;
-  }
-  
-  .slick-list
-  {
-      position: relative;
-  
-      display: block;
-      overflow: hidden;
-  
-      margin: 0;
-      padding: 0;
-  }
-  .slick-list:focus
-  {
-      outline: none;
-  }
-  .slick-list.dragging
-  {
-      cursor: pointer;
-      cursor: hand;
-  }
-  
-  .slick-slider .slick-track,
-  .slick-slider .slick-list
-  {
-      -webkit-transform: translate3d(0, 0, 0);
-         -moz-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-           -o-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-  }
-  
-  .slick-track
-  {
-      position: relative;
-      top: 0;
-      left: 0;
-  
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  .slick-track:before,
-  .slick-track:after
-  {
-      display: table;
-  
-      content: '';
-  }
-  .slick-track:after
-  {
-      clear: both;
-  }
-  .slick-loading .slick-track
-  {
-      visibility: hidden;
-  }
-  
-  .slick-slide
-  {
-      display: none;
-      float: left;
-  
-      height: 100%;
-      min-height: 1px;
-  }
-  [dir='rtl'] .slick-slide
-  {
-      float: right;
-  }
-  .slick-slide img
-  {
-      display: block;
-  }
-  .slick-slide.slick-loading img
-  {
-      display: none;
-  }
-  .slick-slide.dragging img
-  {
-      pointer-events: none;
-  }
-  .slick-initialized .slick-slide
-  {
-      display: block;
-  }
-  .slick-loading .slick-slide
-  {
-      visibility: hidden;
-  }
-  .slick-vertical .slick-slide
-  {
-      display: block;
-  
-      height: auto;
-  
-      border: 1px solid transparent;
-  }
-  .slick-arrow.slick-hidden {
-      display: none;
-  }
+
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: auto;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+  margin: 0 10px;
+  /*スライド左右の余白調整*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+  background: #eee;
+}
+
+h2,
+p {
+  text-align: center;
+  padding: 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
 
 }
-.header-1_logo-img{
-line-height: 76px;
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
 }
-.header-line{
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+
+  .header-1_logo-img {
+    line-height: 76px;
+  }
+
+  .header-line {
     height: 36px;
     width: 36px;
-}
-.line-link{
+  }
+
+  .line-link {
     margin-top: ;
     text-align: right;
-    
-}
-.header-buttom{
+
+
+  }
+
+  .header-buttom {
     display: flex;
     margin-right: 15px;
-}
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+    
