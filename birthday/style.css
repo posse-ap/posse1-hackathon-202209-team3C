@@ -1,8 +1,12 @@
 /*tabの形状*/
-.tab {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 15px;
+.tab{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    
+    
+  }
+
 
 }
 
@@ -84,12 +88,19 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+        
+
+
 
 @charset "utf-8";
 
 /*==================================================
   スライダーのためのcss
   ===================================*/
+
 .slider img {
   width: 100%;
   /*スライダー内の画像を横幅100%に*/
@@ -201,6 +212,7 @@ a:active {
 
 .slick-loading .slick-track {
   visibility: hidden;
+
 }
 
 .slick-slide {
@@ -261,6 +273,7 @@ a:active {
     margin-top: ;
     text-align: right;
 
+
   }
 
   .header-buttom {
@@ -272,3 +285,5 @@ a:active {
     display: flex;
     justify-content: space-between;
   }
+
+    
