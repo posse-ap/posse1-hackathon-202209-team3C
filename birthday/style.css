@@ -58,8 +58,6 @@
   }
 }
 
-
-
 /*========= レイアウトのためのCSS ===============*/
 
 body {
@@ -146,6 +144,7 @@ h3 {
   color: hotpink;
   font-family: serif;
   font-size: 25px;
+  padding-top: 40px;
 }
 
 p {
@@ -339,7 +338,7 @@ a:active {
 .gallery img {
   width: 100%;
   height: auto;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
 }
 
 /* レスポンシブ ブレイクポイント 480px 720px */
@@ -369,7 +368,7 @@ a:active {
 
 @media only screen and (max-width: 768px) {
   .gallery {
-    columns: 2;
+    columns: 1;
   }
 }
 
