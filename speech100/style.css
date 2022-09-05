@@ -13,12 +13,34 @@ a {
 
 header{
   display: flex;
-  /* justify-content: space-between; */
-  border-bottom: solid 1px rgb(174, 174, 174);
-}
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #eee;
+  }
 .header-1_logo-img {
   line-height: 76px;
   padding: 25px;
+}
+
+.header-tab{
+  display: flex;
+}
+
+.header-tab li{list-style: none;
+      /* width: 80%; */
+      }
+.header-tab a{
+  text-decoration: none;
+  margin-right: 15px;
+  
+}
+@media screen and (max-width: 480px){
+  .header-tab a{
+      font-size: 30%;
+  }
 }
 
 
@@ -27,7 +49,7 @@ header{
   padding: 1em;
 }
 
-p,h2,h1,dt,dd,dl{
+li,p,h2,h1,dt,dd,dl{
   font-family: serif;
 }
 
