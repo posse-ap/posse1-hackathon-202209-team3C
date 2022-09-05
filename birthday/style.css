@@ -76,7 +76,7 @@ a {
   background: #fefefe;
 }
 
-.area h2 {
+.area {
   font-size: 1.3rem;
   margin: 0 0 20px 10px;
   padding-top: 40px;
@@ -87,9 +87,15 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
+li{
+  font-family: serif;
+  font-size: 20px;
+}
+
 header{
     display: flex;
-    justify-content: space-between;}
+    justify-content: space-between;
+  }
         
 
 
@@ -120,17 +126,35 @@ body {
   background: #eee;
 }
 
+h1{
+  font-family: serif;
+  font-size: 40px;
+}
+
 h2 {
   text-align: center;
+  color:hotpink;
+  font-family: serif;
+  font-size: 35px;
+  padding-top: 40px;
+}
+
+
+h3{
+  color:hotpink;
+  font-family: serif;
+  font-size: 25px;
 }
 
 p {
   text-align: center;
-  padding: 20px 3px 20px 20;
+  padding: 20px 3px 20px 20px;
+  font-family: serif;
+  font-size: 25px;
 }
 
 h3{
-  te
+  padding-top: 40px 10px;
 }
 
 ul {
@@ -276,6 +300,7 @@ a:active {
     width: 36px;
   }
 
+  
   .line-link {
     text-align: right;
 
@@ -287,38 +312,33 @@ a:active {
     margin-right: 15px;
   }
 
-  header{
-    display: flex;
-    justify-content: space-between;
-  }
-
   
   .area li{
     padding: 10px; 
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ;
   }
 
 
-  /* ８月 バースデイカード */
+  /*  バースデイカード */
 
 .gallery{
-  columns: 4;/*段組みの数*/
-  padding:0 15px;/*ギャラリー左右に余白をつける*/
+  columns: 4;
+  padding:0 15px;
   margin:0;
   }
   
   .gallery li {
-      margin-bottom: 20px;/*各画像下に余白をつける*/
+      margin-bottom: 20px;
   list-style:none;
   }
   
-  /*ギャラリー内のイメージは横幅100%にする*/
+  
   .gallery img{
     width:100%;
     height:auto;
-    vertical-align: bottom;/*画像の下にできる余白を削除*/}
+    vertical-align: bottom;}
   
-  /*　横幅900px以下の段組み設定　*/
+  /*横幅900px以下の段組み設定*/
   @media only screen and (max-width: 900px) {
     .gallery{
     columns:3;
@@ -338,12 +358,12 @@ a:active {
 	display: none;
 }
 
-/*モーダルの横幅を変更したい場合*/
+/*モーダルの横幅*/
 .modaal-container{
     max-width: 600px;
 }
 
-/*モーダルのボタンの色を変更したい場合*/
+/*モーダルのボタンの色を変更したい*/
 .modaal-close:after, 
 .modaal-close:before{
 	background:#ccc;	
@@ -354,4 +374,23 @@ a:active {
 .modaal-close:hover:after,
 .modaal-close:hover:before{
 	background:#666;
+}
+
+/* いいねボタン */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#counter{
+  width: 100%;
+  padding: 1em 0;
+  font-size: 64pt;
+  text-align: center;
+}
+
+#btnAdd{
+  width: 100%;
+  font-size: 64pt;
 }
