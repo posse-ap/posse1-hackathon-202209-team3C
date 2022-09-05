@@ -41,16 +41,24 @@ header{
 .tab{
     display: flex;
 }
+
 .tab li{list-style: none;
+        /* width: 80%; */
         }
 .tab a{
     text-decoration: none;
     margin-right: 15px;
+    
+}
+@media screen and (max-width: 480px){
+    .tab a{
+        font-size: 30%;
+    }
 }
 .module {
     display: flex;
     align-items: center;
-    background: #eee;
+    background: #fff;
     padding: 10px;
     overflow: hidden;
 }
@@ -247,35 +255,11 @@ text-align: center;
     border-right: transparent;
     padding-bottom: 35px;
 }
+
 .posse-logo{
     margin-top: 80px;
     width: 15%;
     padding-bottom: 30px;
-}
-.posse-link-img{
-    border-radius: 50%;
-    border: solid 1px #eee;
-    height: 50px;
-    width: 50px;
-    background-color: #FFF;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    margin-left: 15px;
-
-
-
-}
-.p-end{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 50px;
-}
-.footer-link{
-    display: flex;
-    justify-content: center;
 }
 #video-area{
     position: fixed;
@@ -302,7 +286,7 @@ text-align: center;
 }
 
 #container{
-    background:#faf6f6;
+    background:#fff;
     padding:0 0;
     text-align: center;
 }
