@@ -1,3 +1,40 @@
+.header-1_logo-img {
+  line-height: 76px;
+  padding: 25px;
+}
+
+.header-tab{
+  display: flex;
+  margin: auto 0px;
+    padding: 0 0 0 40px;
+}
+
+.header-tab li{list-style: none;
+      /* width: 80%; */
+      }
+.header-tab a{
+  text-decoration: none;
+  margin-right: 15px;
+  
+}
+
+.header-tab li{
+  font-family: serif;
+}
+@media screen and (max-width: 480px){
+  .header-tab a{
+      font-size: 30%;
+  }
+}
+
+
+.header-wrapper{
+  justify-content: space-between;
+  display: flex
+}
+
+
+
 @charset "utf-8";
 
 /*tabの形状*/
@@ -83,7 +120,7 @@ a {
 .area {
   font-size: 1.3rem;
   margin: 0 0 20px 10px;
-  padding-top: 40px;
+  padding-top: 150px;
 }
 
 .area li {
@@ -94,8 +131,12 @@ a {
 header{
     display: flex;
     justify-content: space-between;
-    /* position: fixed */
-        
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #eee;
+  
 }
 
 
