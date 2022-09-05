@@ -34,12 +34,15 @@ header{
     background-color: #eee;
     }
 .header-1_logo{
-        line-height: 60.8px;
-        padding-left: 30px;
+        /* line-height: 60.8px;
+        padding-left: 30px; */
+        /* line-height: 76px; */
+        padding: 25px;
     }
 
 .tab{
     display: flex;
+    margin: auto 0px;
 }
 
 .tab li{list-style: none;
