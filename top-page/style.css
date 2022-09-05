@@ -27,9 +27,9 @@ header{
     justify-content: space-between;
     position: fixed;
     top: 0;
-    width: 1425px;
+    width: 100%;
     z-index: 50;
-    background-color: #faf6f6;
+    background-color: #eee;
     }
 .header-1_logo{
         line-height: 60.8px;
