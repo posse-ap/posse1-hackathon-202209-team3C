@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /*tabの形状*/
-<<<<<<< HEAD
 .tab{
     display: flex;
     flex-wrap: wrap;
@@ -11,20 +10,10 @@
   }
   html {
     overflow-y:scroll;
-=======
-.tab {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 15px;
->>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
 }
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
 .tab li a {
   display: block;
   background: #ddd;
@@ -104,7 +93,6 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
-<<<<<<< HEAD
 header{
     display: flex;
     justify-content: space-between;
@@ -112,23 +100,8 @@ header{
         
 }
 
-@charset "utf-8";
 
 /*==================================================
-=======
-li {
-  font-family: serif;
-  font-size: 20px;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-/*
->>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
   スライダーのためのcss
 */
 
@@ -466,9 +439,6 @@ a:active {
   margin-top: -4px
 }
 
-
-
-<<<<<<< HEAD
   .header-buttom {
     display: flex;
     margin-right: 15px;
@@ -481,5 +451,3 @@ a:active {
 
 
 
-=======
->>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
