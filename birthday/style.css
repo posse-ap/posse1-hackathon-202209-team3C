@@ -1,15 +1,30 @@
 @charset "utf-8";
 
 /*tabの形状*/
+<<<<<<< HEAD
+.tab{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    
+    
+  }
+  html {
+    overflow-y:scroll;
+=======
 .tab {
   display: flex;
   flex-wrap: wrap;
   margin-right: 15px;
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
 }
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
 .tab li a {
   display: block;
   background: #ddd;
@@ -89,6 +104,18 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
+<<<<<<< HEAD
+header{
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed */
+        
+}
+
+@charset "utf-8";
+
+/*==================================================
+=======
 li {
   font-family: serif;
   font-size: 20px;
@@ -101,13 +128,16 @@ header {
 
 
 /*
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
   スライダーのためのcss
 */
 
 .slider img {
-  width: 100%;
+  width: 100%; */
   /*スライダー内の画像を横幅100%に*/
   height: auto;
+ 
+  
 }
 
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
@@ -198,6 +228,7 @@ a:active {
 
   margin: 0;
   padding: 0;
+  
 }
 
 .slick-list:focus {
@@ -437,3 +468,18 @@ a:active {
 
 
 
+<<<<<<< HEAD
+  .header-buttom {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+=======
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
