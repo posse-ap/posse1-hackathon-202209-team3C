@@ -1,4 +1,7 @@
+@charset "utf-8";
+
 /*tabの形状*/
+<<<<<<< HEAD
 .tab{
     display: flex;
     flex-wrap: wrap;
@@ -8,10 +11,20 @@
   }
   html {
     overflow-y:scroll;
+=======
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 15px;
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
 }
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
 .tab li a {
   display: block;
   background: #ddd;
@@ -80,9 +93,10 @@ a {
   background: #fefefe;
 }
 
-.area h2 {
+.area {
   font-size: 1.3rem;
   margin: 0 0 20px 10px;
+  padding-top: 40px;
 }
 
 .area li {
@@ -90,6 +104,7 @@ a {
   border-bottom: 1px solid #ddd;
 }
 
+<<<<<<< HEAD
 header{
     display: flex;
     justify-content: space-between;
@@ -100,8 +115,22 @@ header{
 @charset "utf-8";
 
 /*==================================================
+=======
+li {
+  font-family: serif;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec
   スライダーのためのcss
-  ===================================*/
+*/
 
 .slider img {
   width: 100%; */
@@ -119,16 +148,42 @@ header{
 }
 
 
-/*========= レイアウトのためのCSS ===============*/
+/*レイアウトのためのCSS*/
 
 body {
   background: #eee;
 }
 
-h2,
+h1 {
+  font-family: serif;
+  font-size: 40px;
+  color: #6ea7a1;
+}
+
+h2 {
+  text-align: center;
+  color: hotpink;
+  font-family: serif;
+  font-size: 35px;
+  padding-top: 40px;
+}
+
+
+h3 {
+  color: hotpink;
+  font-family: serif;
+  font-size: 25px;
+}
+
 p {
   text-align: center;
-  padding: 20px;
+  padding: 20px 3px 20px 20px;
+  font-family: serif;
+  font-size: 25px;
+}
+
+h3 {
+  padding-top: 40px 10px;
 }
 
 ul {
@@ -265,22 +320,155 @@ a:active {
 }
 
 
-  .header-1_logo-img {
-    line-height: 76px;
+.header-1_logo-img {
+  line-height: 76px;
+  padding: 25px;
+}
+
+.header-line {
+  height: 36px;
+  width: 36px;
+}
+
+
+.line-link {
+  text-align: right;
+
+
+}
+
+.header-buttom {
+  display: flex;
+  margin-right: 15px;
+}
+
+
+.area li {
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+
+/*  バースデイカード */
+
+.gallery {
+  columns: 4;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.gallery li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* レスポンシブ ブレイクポイント 480px 720px */
+
+/* 479px以下のもの */
+@media screen and (max-width:479px){
+  /* 489以下のcss */
+}
+
+/* 480pxのブレイクポイント */
+@media screen and (min-width: 480px){
+  /* ここに480pxから720pxまでのcssを書く */
+};
+
+
+/* 720pxのブレイクポイント */
+@media screen and (min-width: 720px){
+  /* ここに720以上のcssを書く */
+};
+
+/*横幅900px以下の段組み設定*/
+@media only screen and (max-width: 900px) {
+  .gallery {
+    columns: 3;
   }
+}
 
-  .header-line {
-    height: 36px;
-    width: 36px;
+@media only screen and (max-width: 768px) {
+  .gallery {
+    columns: 2;
   }
+}
 
-  .line-link {
-    margin-top: ;
-    text-align: right;
+/* いいね ここから */
+.like {
+  display: inline-block;
+  vertical-align: middle
+}
+
+/* いいねボタン */
+.like a.btn {
+  color: #777;
+  font-size: 90%;
+  line-height: 2em;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  background-color: #eee;
+}
+
+.like a.btn:focus,
+.like a.btn:hover {
+  opacity: 0.75
+}
+
+/*吹き出し*/
+/* 横並び */
+.balloon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* 数のボタン */
+.balloon span.number {
+  color: #777;
+  font-size: 90%;
+  line-height: 2em;
+  padding: 5px 10px;
+
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.balloon span.number:after,
+.balloon span.number:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: "";
+  position: absolute;
+}
+
+.balloon span.number:after {
+  border-right-color: #fff;
+  border-width: 4px;
+  margin-top: -4px
+}
+
+.balloon span.number:after {
+  border-right-color: #fff;
+  border-width: 4px;
+  margin-top: -4px
+}
 
 
-  }
 
+<<<<<<< HEAD
   .header-buttom {
     display: flex;
     margin-right: 15px;
@@ -293,3 +481,5 @@ a:active {
 
 
 
+=======
+>>>>>>> 93af6c521ba8e20e56b401a4ff71b5a377a5c6ec

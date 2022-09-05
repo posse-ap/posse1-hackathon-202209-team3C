@@ -1,44 +1,71 @@
 //タブ用のjs
 function GethashID (hashIDName){
     if(hashIDName){
-      //タブ設定
-      $('.tab li').find('a').each(function() { //タブ内のaタグ全てを取得
-        var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得 
-        if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
-          var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
-          $('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
-          $(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
-          //表示させるエリア設定
-          $(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
-          $(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加 
+      $('.tab li').find('a').each(function() { 
+        var idName = $(this).attr('href');  
+        if(idName == hashIDName){ 
+          var parentElm = $(this).parent();
+          $('.tab li').removeClass("active");
+          $(parentElm).addClass("active");
+          $(".area").removeClass("is-active"); 
+          $(hashIDName).addClass("is-active");
         }
       });
     }
   }
+
+  // バースデイカード
+  lightbox.option({
+    'wrapAround': true,
+    'albumLabel': ' %1 / total %2 '
+  })
+
   $('.slider').slick({
-    arrows: false,//左右の矢印はなし
-    autoplay: true,//自動的に動き出すか。初期値はfalse。
-    autoplaySpeed: 0,//自動的に動き出す待ち時間。初期値は3000ですが今回の見せ方では0
-    speed: 6900,//スライドのスピード。初期値は300。
-    infinite: true,//スライドをループさせるかどうか。初期値はtrue。
-    pauseOnHover: false,//オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
-    pauseOnFocus: false,//フォーカスした際にスライドを一時停止させるかどうか。初期値はtrue。
-    cssEase: 'linear',//動き方。初期値はeaseですが、スムースな動きで見せたいのでlinear
-    slidesToShow: 4,//スライドを画面に4枚見せる
-    slidesToScroll: 1,//1回のスライドで動かす要素数
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 6900,
+    infinite: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    cssEase: 'linear',
+    slidesToShow: 4,
+    slidesToScroll: 1,
     responsive: [
       {
-      breakpoint: 769,//モニターの横幅が769px以下の見せ方
+      breakpoint: 769,
       settings: {
-        slidesToShow: 2,//スライドを画面に2枚見せる
+        slidesToShow: 2,
       }
     },
     {
-      breakpoint: 426,//モニターの横幅が426px以下の見せ方
+      breakpoint: 426,
       settings: {
-        slidesToShow: 1.5,//スライドを画面に1.5枚見せる
+        slidesToShow: 1.5,
       }
     }
   ]
   });
-  
+
+// モーダルウィンドウ
+//初回のみモーダルをすぐ出す判定。flagがモーダル表示のstart_open後に代入される
+var access = $.cookie('access')
+if(!access){
+  flag = true;
+  $.cookie('access', false);
+}else{
+  flag = false	
+}
+
+//モーダル表示
+$(".modal-open").modaal({
+start_open:flag, // ページロード時に表示するか
+overlay_close:true,//モーダル背景クリック時に閉じるか
+before_open:function(){// モーダルが開く前に行う動作
+  $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
+},
+after_close:function(){// モーダルが閉じた後に行う動作
+  $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
+}
+});
+
