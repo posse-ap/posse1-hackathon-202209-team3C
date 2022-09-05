@@ -53,6 +53,7 @@ header{
 
 .sp-title{
   padding: 1em;
+  padding-top: 100px;
 }
 
 li,p,h2,h1,dt,dd,dl{
